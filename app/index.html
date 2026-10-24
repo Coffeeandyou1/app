@@ -4,16 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My App</title>
+  <title>My Calculator</title>
   <link rel="stylesheet" href="./src/style.css">
+  <script src="./src/app.js" defer></script>
 </head>
 <body>
-  <div id="app">
-    <h1>My App</h1>
-    <p id="message">Welcome to my application!</p>
-    <button id="clickBtn">Click Me</button>
-  </div>
+  <main class="calculator">
+    <h2>My Calculator</h2>
 
-  <script type="module" src="./src/app.js"></script>
+    <input
+      id="display"
+      value="0"
+      readonly
+      aria-label="Calculator display"
+    >
+
+    <div class="buttons">
+      <button class="clear" data-action="clear">AC</button>
+      <button data-action="delete">DEL</button>
+      <button class="operator" data-value="/">÷</button>
+      <button class="operator" data-value="*">×</button>
+
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button class="operator" data-value="-">−</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button class="operator" data-value="+">+</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button data-value="0">0</button>
+
+      <button data-value=".">.</button>
+      <button class="equal" data-action="calculate">=</button>
+    </div>
+  </main>
 </body>
 </html>
